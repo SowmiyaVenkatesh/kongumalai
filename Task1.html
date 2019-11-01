@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    My Task1
+</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+    .trans{
+        width: 220px;
+        height: 220px;
+        transition: width 2s, height 2s;
+    }
+    .trans:hover{
+        width:300px;
+        height:300px;
+     
+    }
+    a{
+        color: orangered;
+        font-size: 20px;
+    }
+    a:hover{
+        color:green;
+            }
+        
+    </style>
+</head>
+<body>
+    <header>
+            <nav class="navbar">
+                    <div class="container">
+                            <div class="navbar-header" style="padding-left: 1px">
+                                    <img src="data:image/png;base64,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" style="height:50%; width:50%">
+                                  </div>
+            
+                        <ul class="nav navbar-nav navbar-right" style="padding-top: 20px">
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#About">About us</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+    </header>
+
+    <div class="container-fluid" style="padding-top: 2px;">
+    <img src="https://pbs.twimg.com/media/DaC1RMNVQAAXoNx.jpg" style="width:100%">
+    </div>
+    <div class="container-fluid" style="margin-top: 5%">
+            <div class="row">
+                    <div class="col-md-6" >
+                    <img src="https://www.floridamemory.com/fpc/reference/rc15562.jpg" style="height:350px;width:500px;">
+                        </div>
+                    
+                    <div class="col-md-6">
+                        <blockquote>
+                            <h3>HOW IT ALL STARTED?</h3>
+                        
+                                <p style="padding-top: 10%;font-style: oblique; font-size: medium;text-align: justify">
+                                    "The Tropicana story begins with Anthony T. Rossi, who arrived in the U.S. with just $25 in his pocket. He founded Tropicana in 1947 with the mission of making the goodness of the finest fruit accessible to everyone. He developed flash pasteurization and pioneered orange juice transport in 1970 via train from Florida to New York. As Tropicana continues to grow, we have Anthony Rossi to thank for creating the spirit of innovation and fresh thinking that continues at Tropicana today."
+                                </p>
+                        </blockquote>
+                    </div> 
+                    
+            </div>            
+    </div>
+    <div class="container-fluid" style="margin-top: 5%">
+            <div class="row">
+                    <div class="col-md-8">
+                        <h2 style="color:orange;text-align: center">"AS AN OPTION FOR BREAKFAST"</h2>    
+                        <h3 style="text-align: center;color: red;"><i>THE BENIFITS OF BREAKFAST</i></h3> 
+                         <p style="font-size: 25px;text-align: justify">
+                             A growing body of evidence suggests that breakfast consumption may have a
+                             positive on cognitive and academic performance, including memory concentration and problem solving skills.
+                             Research shows that regular breakfast consumption is associated with better nutrition among children and
+                             adolescents.
+                             <br>
+                             <br>
+                             
+                             <span style="font-style: oblique;color:green;">"Purely Delicious
+                             Every glass of Tropicana Pure Premium® is 100% pure-squeezed orange juice. That's it!"
+                            </span>
+                            </p>
+
+                        </div>
+                     <div class="col-4 col-sm-4"> 
+                            <video width="320" height="240" controls autoplay loop>
+                                    <source src="videoplayback.mp4" type="video/mp4">
+                                    
+                                  </video>
+
+
+                         </div>
+                         <div class="col-4 col-sm-4"> 
+                                <video width="320" height="240" controls autoplay loop muted>
+                                        <source src="BIG_BASKET.mp4" type="video/mp4">
+                                        
+                                      </video>
+                        
+                         </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid" style="margin-top: 5%">
+            <h1 style="text-align: center; color:orangered;font-style: italic;"> <b>OUR PRODUCTS</b></h1>
+                <div class="row" style="margin-top: 5%">
+                 <div class="col-sm-3">
+                     
+                  <img class="trans" src="guava.jpg">
+            
+                  
+                <br>
+                <h4  class="vary" style="padding-left: 80px; color:lightgreen">GUAVA DELIGHT</h4>
+                
+                </div>
+                 <div class="col-sm-3">
+
+                    <img class="trans" src="mango.jpg">
+                    <h4  class="vary" style="padding-left: 80px; color:yellow">MANGO DELIGHT</h4>
+                </div>
+                    <div class="col-sm-3">
+                        
+
+                     <img class="trans" src="mixed.jpg">
+                     <h4  class="vary" style="padding-left: 80px; color:peru">MIXEDFRUIT DELIGHT</h4>
+                    </div>
+                    <div class="col-sm-3"> 
+                        <img class="trans" src="litchi.jpg">
+                        <h4  class="vary" style="padding-left: 80px; color:palevioletred">LITCHI DELIGHT</h4>
+                </div>  
+                
+                            
+                </div>
+                    </div>
+
+                    <div class="container-fluid" style="margin-top: 5%">
+                            <div class="row" style="margin-top: 5%">
+                                    <div class="col-sm-3"  >
+
+                                    <img class="trans" src="pomeg.jpg">
+                                    <h4  class="vary" style="padding-left: 80px; color:plum">POMEGRANATE DELIGHT</h4>
+                                        </div>
+                                <div class="col-sm-3">
+
+                                    <img class="trans" src="apple.jpg">
+                                    <h4  class="vary" style="padding-left: 80px; color:red">APPLE JUICE</h4>
+                                            </div>
+                                    <div class="col-sm-3">
+                                    <img class="trans" src="orange.jpg">
+                                    <h4  class="vary" style="padding-left: 80px; color:orangered">ORANGE JUICE</h4>
+                                                </div>
+                                 <div class="col-sm-3">
+                                     <img class="trans" src="grape.jpg">
+                                     <h4  class="vary" style="padding-left: 80px; color:purple">GRAPE JUICE</h4>
+
+                                 </div>               
+                    </div>
+                    </div>
+
+
+        <footer>
+        
+        <div class="container-fluid" style="margin-top: 5%;background-color:lightgray;">
+                <div class="row">
+                           <div class="col-sm-4"> 
+                            </div>
+                            <div class="col-sm-4"> 
+                                <h4 style="padding-left: 100px">Connect with us</h4>
+                                    <i class="fa fa-facebook-square" style="font-size: 24px;padding-left: 60px"></i>
+                                    <i class="fa fa-google-plus-square" style="font-size: 24px;padding-left: 10px"></i>
+                                    <i class="fa fa-linkedin-square" style="font-size: 24px;padding-left: 10px"></i>
+                                    <i class="fa fa-twitter-square" style="font-size: 24px;padding-left: 10px"></i>
+                                    <i class="fa fa-youtube-play" style="font-size: 24px;padding-left: 10px"></i>
+                                    <i class="fa fa-whatsapp" style="font-size: 24px;padding-left: 10px"></i>
+                                    <i class="fa fa-instagram" style="font-size: 24px;padding-left: 10px"></i>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p>
+                                           <span class="glyphicon glyphicon-copyright-mark"></span>2019 Tropicana Private Limited. All Rights Reserved.
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>  
+                                <div class="col-sm-4"> 
+                                    </div> 
+            </div>
+             
+        </div>
+
+        </footer>
+
+</body>
+
+</html>
